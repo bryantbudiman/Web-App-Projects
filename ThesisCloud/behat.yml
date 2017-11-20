@@ -1,0 +1,21 @@
+default:
+  extensions:
+    Laracasts\Behat:
+      env_path: .env.behat
+    Behat\MinkExtension:
+      default_session: laravel
+      base_url: http://localhost:8888
+      laravel: ~
+  suites:
+    welcome_features:
+      paths:    [ %paths.base%/features/home ]
+      contexts: [ FeatureContext ]
+    cloud_features:
+      paths:    [ %paths.base%/features/cloud ]
+      contexts: [ FeatureContext ]
+    song_features:
+      paths:    [ %paths.base%/features/song ]
+      contexts: [ FeatureContext ]
+    lyrics_features:
+      paths:    [ %paths.base%/features/lyrics ]
+      contexts: [ FeatureContext ]
